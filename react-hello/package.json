@@ -1,0 +1,21 @@
+{
+  "name": "react-hello",
+  "version": "1.0.0",
+  "description": "hello world",
+  "main": "index.js",
+  "dependencies": {
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "babel-preset-react": "^6.24.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "popados",
+  "license": "ISC"
+}
