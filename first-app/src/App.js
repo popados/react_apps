@@ -11,14 +11,30 @@ class App extends React.Component {
         this.state = {
             todos: todosData
         }
+        this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleChange(id) {
+      console.log("changed", id)
+      this.setState(prevState => {
+        const updatedTodos = prevState.todos.map(todo => {
+          if(todo.id === id){
+            todo.completed = !todo.completed
+          }
+          return todo
+        })
+        return {
+          todos: updatedTodos
+        }
+      })
     }
 
     render() {
-        const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}/>)
+        const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}
+          handleChange={this.handleChange}/>)
 
         return (
           <div>
-          //instance of header
             <div>
               <Header />
             </div>
@@ -38,3 +54,5 @@ export default App
 //can add a nav bar and drop down menus
 //todo list(main app component)
 //footer for my app
+
+//instance of header

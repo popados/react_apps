@@ -1,33 +1,53 @@
 const todosData = [
     {
         id: 1,
-        text: "Take out the trash",
-        completed: true
+        text: "Create a nav bar",
+        completed: false
     },
     {
         id: 2,
-        text: "Grocery shopping",
+        text: "create todo input",
         completed: false
     },
     {
         id: 3,
-        text: "Clean gecko tank",
-        completed: true
+        text: "checkbox function",
+        completed: false
     },
     {
         id: 4,
-        text: "Mow lawn",
+        text: "submit finished",
         completed: false
     },
     {
         id: 5,
-        text: "Catch up on Arrested Development",
+        text: "create button functions",
         completed: false
     },
     {
         id: 6,
         text: "Program for an hour a day",
         completed: false
+    },
+    {
+      id: 7,
+      text: "create a drop down menu",
+      completed: false
+    },
+    {
+      id: 8,
+      text: "add riot api functionality for download",
+      completed: false
+    },
+    {
+      id: 9,
+      text: "create responsive html with react",
+      completed: false
+    },
+    {
+      id: 10,
+      text: "add user input",
+      completed: false
     }
 ]
 

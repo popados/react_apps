@@ -1,18 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-function Footer() {
+class Footer extends React.Component {
 //these are where my objects will go
-
-
-  return (
-    <div className = "footer">
-      <footer>
-        <p> This app is written by Nik Khandwala </p>
-      </footer>
-    </div>
-  );
-
+  render() {
+    return (
+      <div className = "footer">
+        <footer>
+          <p> This app is written by Nik Khandwala </p>
+        </footer>
+      </div>)
+    }
 }
 
 export default Footer

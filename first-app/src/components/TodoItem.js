@@ -1,20 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-function MyInfo(props) {
-//these are where my objects will go
+class TodoItem extends React.Component {
+  render() {
+    return (
+      <div className="todo-item">
 
-
-  return (
-    <div className="todo-item">
-      <p>{props.item.text}</p>
-      <input type="checkbox"
-      checked={props.item.completed}
-      onChange={() => console.log("Changed!")} 
-      />
-    </div>
-  );
-
+        <input
+          type="checkbox"
+          checked={this.props.item.completed}
+          onChange={() => this.props.handleChange(this.props.item.id)}/>
+          <p>
+          {this.props.item.text}
+          </p>
+      </div> )
+  }
 }
 
-export default MyInfo
+export default TodoItem

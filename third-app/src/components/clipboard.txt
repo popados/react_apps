@@ -1,0 +1,16 @@
+<div>
+  <Header />
+  <ChampionObjectCard
+    champion = {{name: "Vayne", id: "67", role: "Carry", "secondary": "Assassin", title: "the Night Hunter"}}
+  />
+</div>
+<div>
+  <Header />
+  <ChampionObjectCard
+    champion = {{name: "Ezreal", id: "81", role: "Carry", "secondary": "Mage", title: "the Prodigal Explorer"}}
+  />
+</div>
+<div>
+  <Header />
+  {championComponent}
+</div>

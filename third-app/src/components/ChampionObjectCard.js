@@ -1,14 +1,15 @@
 import React from "react"
 
-function ChampionObjectCard(props) {
+function Champion(props) {
     return (
       <div>
-        <p> Champion Name: {props.champion.name} </p>
-        <p> Champion id: {props.champion.id} </p>
-        <p> Role: {props.champion.role} </p>
-        <p> Secondary: {props.champion.secondary} </p>
+        <p> Champion name: {props.champ.name} </p>
+        <p> Champion id: {props.champ.id} </p>
+        <p> Role: {props.champ.role} </p>
+        <p> Description: {props.champ.description} </p>
+        <input type="Button" value="Select this champion" />
       </div>
     )
 }
 
-export default ChampionObjectCard
+export default Champion

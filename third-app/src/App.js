@@ -1,29 +1,18 @@
 import React from "react"
-import ChampionObjectCard from "./components/ChampionObjectCard"
+import Champion from "./components/ChampionObjectCard"
 import Header from "./components/Header"
+import Product from "./Product"
+import productsData from "./champData"
+
+
+//add champion data
 
 
 function App() {
+  const championComponent = productsData.map(champion => <Champion key ={champion.id} value={champion}/>)
     return (
       <div>
-        <div>
-          <Header />
-          <ChampionObjectCard
-            champion = {{name: "Vayne", id: "67", role: "Carry", "secondary": "Assassin", title: "the Night Hunter"}}
-          />
-        </div>
-        <div>
-          <Header />
-          <ChampionObjectCard
-            champion = {{name: "Ezreal", id: "81", role: "Carry", "secondary": "Mage", title: "the Prodigal Explorer"}}
-          />
-        </div>
-        <div>
-          <Header />
-          <ChampionObjectCard
-            champion = {{name: "Caitlyn", id: "51", role: "Carry", "secondary": "N/A", title: "the Sheriff of Piltover"}}
-            />
-        </div>
+        {championComponent}
       </div>
     );
 }
