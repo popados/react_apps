@@ -30,24 +30,24 @@ const todosData = [
         completed: false
     },
     {
-      id: 7,
-      text: "create a drop down menu",
-      completed: false
+        id: 7,
+        text: "create a drop down menu",
+        completed: false
     },
     {
-      id: 8,
-      text: "add riot api functionality for download",
-      completed: false
+        id: 8,
+        text: "add riot api functionality for download",
+        completed: false
     },
     {
-      id: 9,
-      text: "create responsive html with react",
-      completed: false
+        id: 9,
+        text: "create responsive html with react",
+        completed: false
     },
     {
-      id: 10,
-      text: "add user input",
-      completed: false
+        id: 10,
+        text: "add user input",
+        completed: false
     }
 ]
 
