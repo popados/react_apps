@@ -9,9 +9,16 @@ class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            todos: todosData
+            todos: todosData,
+            newTodo: ""
         }
         this.handleChange = this.handleChange.bind(this)
+    }
+
+    handleInput(e) {
+      this.setState({
+        newTodo: e.target.value
+      })
     }
 
     handleChange(id) {
@@ -40,9 +47,9 @@ class App extends React.Component {
             </div>
             <div className="todo-list">
               {todoItems}
-            </div>
-            <div>
-              <Footer />
+              <input type="text"
+               value={this.state.newTodo}
+               onChange={this.handleInput}/>
             </div>
           </div>
         )

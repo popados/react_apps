@@ -14,13 +14,13 @@ class Header extends React.Component {
             <li><a href="">Todo list</a></li>
             <li><a href="">Champion Cards</a></li>
             <div className="dropdown">
-            <button className="dropbtn">Dropdown</button>
-            <div className="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <button className="dropbtn">Dropdown</button>
+                <div className="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
             </div>
-          </div>
           </ul>
         </nav>
       </div>
