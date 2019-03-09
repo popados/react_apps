@@ -46,7 +46,7 @@ h1 {
 button {
     border: 1px solid lightgray;
     background-color: transparent;
-    padding: 10px;
+    padding: 5px;
     border-radius: 4px;
 }
 
@@ -60,7 +60,7 @@ button:focus {
 
 .cd-primary-nav {
     display: inline-block;
-    float: center;
+    float: left;
     height: 100%;
     padding-right: 5%;
   }
@@ -104,7 +104,7 @@ button:focus {
   } */
   /* Dropdown Button */
   .dropbtn {
-    background-color: #4CAF50;
+    background-color: #000;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -150,5 +150,5 @@ button:focus {
   }
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
-    background-color: #3e8e41;
+    background-color: #a9a9a9;
   }
