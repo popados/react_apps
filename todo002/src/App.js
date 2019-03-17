@@ -41,6 +41,7 @@ for (const name_key of player_keys) {
   string_key.push(name_key)
   //console.log(name_key)
 }
+debugger;
 console.log(arr_data)
 
 
