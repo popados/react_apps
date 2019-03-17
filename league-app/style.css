@@ -1,72 +1,77 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    height: 100px;
+    background-color: #333;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px 20px 0;
+    width: 70%;
+    border-bottom: 1px solid #cecece;
+    font-family: Roboto, sans-serif;
+    font-weight: 100;
+    font-size: 15px;
+    color: #333333;
+}
+
+.todo-list {
+  background-color: white;
+  margin: auto;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 1px solid #efefef;
+  box-shadow:
+/* The top layer shadow */
+    0 1px 1px rgba(0,0,0,0.15),
+        /* The second layer */
+    0 10px 0 -5px #eee,
+        /* The second layer shadow */
+    0 10px 1px -4px rgba(0,0,0,0.15),
+        /* The third layer */
+    0 20px 0 -10px #eee,
+        /* The third layer shadow */
+    0 20px 1px -9px rgba(0,0,0,0.15);
+  padding: 30px;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
   color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+input[type=checkbox] {
+    margin-right: 10px;
+    font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type=checkbox]:focus {
+    outline: 0;
 }
 
-div {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: left;
-}
-
-h1 {
-    font-size: 3em;
-}
-
-button {
-    border: 1px solid lightgray;
-    background-color: transparent;
-    padding: 5px;
-    border-radius: 4px;
-}
-
-button:hover {
-    cursor: pointer;
-}
-button:active {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: left;
-}
-
-button:focus {
-    outline:0;
-}
-
+/* this is the links */
 .cd-primary-nav {
     display: inline-block;
-    float: left;
+    float: center;
     height: 100%;
     padding-right: 5%;
   }
@@ -76,7 +81,7 @@ button:focus {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #000;
   }
 
   li {
@@ -86,7 +91,7 @@ button:focus {
   li a {
     display: block;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
@@ -110,7 +115,7 @@ button:focus {
   } */
   /* Dropdown Button */
   .dropbtn {
-    background-color: #000;
+    background-color: #4CAF50;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -125,15 +130,12 @@ button:focus {
 
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
-    display: inline-block;
+    display: none;
     position: relative;
     background-color: #f1f1f1;
     min-width: 160px;
-    right: -100px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 0;
-    align-content: center;
-    justify-content: center;
   }
 
   /* Links inside the dropdown */
@@ -145,19 +147,13 @@ button:focus {
   }
 
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {
-    background-color: #fff;
-  }
+  .dropdown-content a:hover {background-color: #fff;}
 
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
+  .dropdown:hover .dropdown-content {display: block;}
 
   .nav li:hover ul {
     display: block;
   }
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
-    background-color: #a9a9a9;
-  }
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}

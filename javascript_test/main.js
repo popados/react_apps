@@ -1,4 +1,5 @@
 
+
   var obj = DATA
   var playerID = []
   console.log(DATA)
@@ -13,3 +14,14 @@
   playerID.push(obj.participants[4])
 
   console.log(playerID)
+var request = new XMLHttpRequest();
+
+
+  request.open('GET', 'https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/bugPPRmcArYxOcbfZxs-g7fwoe9aZHo8ajQJ034e1JAnwQ?api_key=[API_KEY]', true);
+  request.onload = function () {
+
+    // Begin accessing JSON data here
+    var data = JSON.parse(this.response);
+    console.log(data);
+  }
+  request.send();

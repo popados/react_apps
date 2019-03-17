@@ -17,7 +17,7 @@ class App extends React.Component {
 
     handleInput(e) {
       this.setState({
-        newTodo: e.target.value
+        newTodo: "e.target.value"
       })
     }
 
@@ -50,6 +50,7 @@ class App extends React.Component {
               <input type="text"
                value={this.state.newTodo}
                onChange={this.handleInput}/>
+               <input type="submit" text="submit" value="submit"/>
             </div>
           </div>
         )
