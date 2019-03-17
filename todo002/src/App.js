@@ -1,27 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import DATA from './components/data.js'
 import PlayerCard from './components/PlayerCard'
+import TestComponent from './components/TestComponent'
 
 
 let arr_data = []
 let string_key = []
+let summon_name = []
+let i = 0
 const players = DATA.participants
+const summonerName = DATA.participantIdentities
+const data_arr = DATA
+
 const map1 = players.map(player => player)
 console.log(map1)
 for (const player of map1) {
   console.log(player.stats)
   arr_data.push(player.stats)
 }
+console.log(map1[0].championId)
 
+const player_name = summonerName.map(nameID => nameID )
+console.log(player_name[0].player)
+
+while(i < player_name.length) {
+  summon_name.push(player_name[i].player)
+  i++
+}
+console.log(summon_name)
 for(const participant in map1) {
   console.log(participant)
 }
 
+const mapped_names = player_name.map(sum_name => sum_name)
+
+console.log(mapped_names)
 let player_keys = Object.keys(arr_data[0])
-let i = 0
 let len = arr_data.length
+
+
 
 // let list = arr_data.map(obj => {
 //   var newObj = {}
@@ -54,8 +72,10 @@ class App extends Component {
         data: DATA,
         count: 0,
         kills: 0,
-        players: [arr_data],
-        partcipants: ""
+        players: arr_data,
+        partcipants: "",
+        mapped_arr: map1,
+        summoner_name: summon_name
     }
     this.handleClick = this.handleClick.bind(this)
     this.loadData = this.loadData.bind(this)
@@ -82,44 +102,20 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.players[0])
-    const todoItems = this.state.players.map(player => <PlayerCard key={player.participantId} players={player}/>)
+    console.log(this.state.data.participantIdentities)
+    console.log(this.state.players)
+    //console.log(this.state.data.partcipants[0])
+    const todoItems = this.state.mapped_arr.map(player => <PlayerCard key={player.participantId} players={player}/>)
       return (
           <div>
-          <div>
-          <nav className ="cd-primary-nav">
-              <ul>
-            <div className="dropdown">
-              <button className="dropbtn">Dropdown</button>
-                <div className="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
-              </div>
-              </div>
-              </ul>
-            </nav>
-            </div>
-              <h1>{this.state.count}</h1>
-              <h1>{this.state.kills}</h1>
-              <div>
-                <p>Player number: {arr_data[0].participantId}</p>
-                <ul>
-                  <li>Kills: {arr_data[0].kills}</li>
-                  <br>
-                  </br>
-                  <li>Deaths: {arr_data[0].deaths}</li>
-                </ul>
-                <p>Player number: {arr_data[1].participantId}</p>
-                <p>Player number: {arr_data[2].participantId}</p>
-                <p>Player number: {arr_data[3].participantId}</p>
-                <p>Player number: {arr_data[4].participantId}</p>
-                <p>Player number: {arr_data[5].participantId}</p>
-              </div>
+              <TestComponent />
+              <h1>Match ID: {this.state.data.gameId}</h1>
+              {todoItems}
               <button onClick = {this.handleClick}>Change!</button>
               <input placeholder="enter api key"></input>
               <button onClick = {this.loadData}>console log data</button>
-              <PlayerCard />
+              <div>
+              </div>
           </div>
       )
   }
