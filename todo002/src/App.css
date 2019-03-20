@@ -125,7 +125,7 @@ button:focus {
 
   /* Dropdown Content (Hidden by Default) */
   .dropdown-content {
-    display: inline-block;
+    display: none;
     position: relative;
     background-color: #f1f1f1;
     min-width: 160px;

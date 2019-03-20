@@ -1,33 +1,41 @@
-.App {
-  text-align: center;
+.display-layout {
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.all-match-display {
+  background-color: lightblue;
+  width: 100%;
+  display: grid;
+  grid-column: 1;
+  grid-row: 1 / 5;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.current-match {
+  background-color: lightblue;
+  justify-content: center;
+  display: grid;
+  grid-column: auto;
+  grid-column: 2;
+  grid-row: 1;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.player-card-display {
+  background-color: lightgreen;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  grid-column: 2 / 8;
+  grid-row: 2;
+}
+
+.player-card {
+  background-color: yellow;
+  width: 100%;
+  display: grid;
 }
