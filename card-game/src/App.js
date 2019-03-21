@@ -37,7 +37,7 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      fireball: fireball,
+      currentCard: fireball,
       hand: hand
     }
   }
@@ -57,9 +57,9 @@ class App extends Component {
           <p>Your Commander HP: </p>
         </div>
         <div className="five">
-          <h3>  Your Commander Hand: </h3>
+          <h3> Your Commander Hand: </h3>
           <p> Display Cards Here: </p>
-          <Fireball fireball={this.state.fireball} />
+          <Fireball currentCard={this.state.currentCard} hand={this.state.hand} />
         </div>
       </div>
     );
