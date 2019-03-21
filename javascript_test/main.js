@@ -17,7 +17,7 @@
 var request = new XMLHttpRequest();
 
 
-  request.open('GET', 'https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/bugPPRmcArYxOcbfZxs-g7fwoe9aZHo8ajQJ034e1JAnwQ?api_key=[API_KEY]', true);
+  request.open('GET', 'https://na1.api.riotgames.com/lol/match/v4/matchlists/by-account/bugPPRmcArYxOcbfZxs-g7fwoe9aZHo8ajQJ034e1JAnwQ?api_key=RGAPI-de40982d-f9be-4567-8cdc-3ef1c2657a94', true);
   request.onload = function () {
 
     // Begin accessing JSON data here

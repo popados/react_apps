@@ -13,6 +13,7 @@ const players = DATA.participants
 const summonerName = DATA.participantIdentities
 const data_arr = DATA
 
+
 const map1 = players.map(player => player)
 console.log(map1)
 for (const player of map1) {

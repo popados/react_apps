@@ -10,7 +10,7 @@ class App extends React.Component {
         super()
         this.state = {
             todos: todosData,
-            newTodo: ""
+            newTodo: null
         }
         this.handleChange = this.handleChange.bind(this)
     }
