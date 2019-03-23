@@ -77,6 +77,10 @@ class App extends Component {
         hand: this.state.hand
         }))
       this.state.deck.push(fireball)
+      this.state.enemy.health -= this.state.currentCard.attack;
+      if (this.state.enemy.health < 0) {
+        alert("you dead")
+      }
     }
     render() {
       console.log(this.state.deck)

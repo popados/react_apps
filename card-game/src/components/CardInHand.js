@@ -19,7 +19,7 @@ class CardInHand extends React.Component {
   render () {
     return ( <div className ="card"> 
               {this.props.currentCard.name} <br />
-              <button > Select Card </button>
+              <button onClick={this.showAlert} > Select Card </button>
             </div>)
   }
 }
